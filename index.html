@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/main.css"> <!-- Enlaza a la hoja de estilos CSS -->
+    <script src="assets/main.js" defer></script> <!-- Enlaza al script JavaScript con el atributo "defer" -->
+    <title>Inicio</title> <!-- Establece el título de la página en la pestaña del navegador -->
+</head>
+<body>
+    <header>
+        <h1>El Tacón de Oro</h1> <!-- Encabezado principal con el nombre del sitio -->
+        <nav class="navbar" id="navbar">
+            <div class="navbar-content">
+                <a href="index.html">Inicio</a> <!-- Enlace a la página de inicio -->
+                <a href="templates/aboutUs.html">Acerca de Nosotros</a> <!-- Enlace a la página "Acerca de Nosotros" -->
+                <a href="templates/help.html">Ayuda</a> <!-- Enlace a la página de ayuda -->
+                <a href="templates/blog.html">Blog</a> <!-- Enlace a la página de blog -->
+            </div>
+        </nav>
+        <div>
+            <a href="templates/reg.html"><button class="reg">Registrarse</button></a> <!-- Botón para registrarse -->
+        </div>
+        <button class="menu" id="menuButton">
+            <img src="assets/img/menu.png" alt=""> <!-- Botón de menú con una imagen de menú -->
+        </button>
+        <div class="menu-content" id="menuContent">
+            <a class="menu-link" href="index.html">Inicio</a> <!-- Enlace a la página de inicio en el menú desplegable -->
+            <a class="menu-link" href="templates/aboutUs.html">Acerca de Nosotros</a> <!-- Enlace a la página "Acerca de Nosotros" en el menú desplegable -->
+            <a class="menu-link" href="templates/help.html">Ayuda</a> <!-- Enlace a la página de ayuda en el menú desplegable -->
+            <a class="menu-link" href="templates/blog.html">Blog</a> <!-- Enlace a la página de blog en el menú desplegable -->
+            <a href="templates/reg.html"><button class="menu-link">Registrarse</button></a> <!-- Enlace y botón para registrarse en el menú desplegable -->
+        </div>
+    </header>
+
+    <main>
+        <article id="tacon">
+            <p>El Tacón de Oro es una tienda tanto como física como Online, en esta tienda se venden Calzados, Bolsos y Accesorios.</p> <!-- Información sobre el negocio "El Tacón de Oro" -->
+        </article>
+
+        <article class="piel" id="piel">
+            <h1>La piel</h1> <!-- Título de la sección "La Piel" -->
+            <div>
+                <img src="https://www.elagoradiario.com/wp-content/uploads/2020/09/cuero.jpg" alt="lapiel"> <!-- Imagen relacionada con la piel -->
+                <p>La piel ha tenido un tratado especial por los fabricantes y esta es exclusiva ya que es sintética y ecológica.</p> <!-- Información sobre la piel utilizada en los productos -->
+            </div>
+        </article>
+
+        <article class="prods">
+            <h1>Productos</h1> <!-- Título de la sección de productos -->
+            <div>
+                <article>
+                    <img src="assets/img/tacones.jpg" alt="Calzado"> <!-- Imagen de calzado -->
+                    <p>Calzado</p> <!-- Descripción de la categoría de calzado -->
+                </article>
+                <article>
+                    <img src="assets/img/bolso.jpg" alt="Bolsos"> <!-- Imagen de bolsos -->
+                    <p>Bolsos</p> <!-- Descripción de la categoría de bolsos -->
+                </article>
+                <article>
+                    <img src="assets/img/pulsera.jpg" alt="Accesorios"> <!-- Imagen de accesorios -->
+                    <p>Accesorios</p> <!-- Descripción de la categoría de accesorios -->
+                </article>
+                
+            </div>
+            <a href="./templates/productos.html">
+                Ver Productos
+            </a> <!-- Enlace para ver más productos -->
+        </article>
+
+        <article class="tiendas" id="tiendas">
+            <h1>Tiendas</h1> <!-- Título de la sección de tiendas -->
+            <div>
+                <img src="assets/img/maps.jpg" alt=""> <!-- Imagen relacionada con ubicación/tiendas -->
+                <div>
+                    <p>Tenemos varias tiendas físicas inserta un Código Postal pora encontrar la más cercana.</p> <!-- Información sobre la búsqueda de tiendas físicas por código postal -->
+                    <form>
+                        <input type="number" placeholder="CP"> <!-- Campo de entrada para el código postal -->
+                        <input type="submit" value="Buscar"> <!-- Botón para buscar tiendas por código postal -->
+                    </form>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Enlaces Rápidos</h3> <!-- Título de la sección de enlaces rápidos -->
+                <ul class="directos">
+                    <li><a href="#tacon">El Tacón de Oro</a></li> <!-- Enlace rápido a la sección "El Tacón de Oro" -->
+                    <li><a href="#piel">La Piel</a></li> <!-- Enlace rápido a la sección "La Piel" -->
+                    <li><a href="#productos">Productos</a></li> <!-- Enlace rápido a la sección de productos -->
+                    <li><a href="#tiendas">Tiendas</a></li> <!-- Enlace rápido a la sección de tiendas -->
+                </ul>
+            </div>
+        
+            <div class="footer-section">
+                <h3>Síguenos en Redes Sociales</h3> <!-- Título de la sección de redes sociales -->
+                <ul class="social-icons">
+                    <li><a href="#"><img src="assets/img/facebook.webp" alt="Facebook"></a></li> <!-- Enlace e icono de Facebook -->
+                    <li><a href="#"><img src="assets/img/instagram.png" alt="Instagram"></a></li> <!-- Enlace e icono de Instagram -->
+                    <li><a href="#"><img src="assets/img/twitter.png" alt="Twitter"></a></li> <!-- Enlace e icono de Twitter -->
+                </ul>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 El Tacón de Oro. Todos los derechos reservados.</p> <!-- Derechos de autor y año -->
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

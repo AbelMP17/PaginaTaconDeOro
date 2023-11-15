@@ -1,0 +1,681 @@
+/* Aplica un estilo de texto blanco a todos los elementos en la página */
+* {
+  color: white;
+}
+
+/* Estilos para el cuerpo de la página */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-image: url('img/fondo.jpg');
+  background-size: cover;
+}
+
+/* Estilos para la sección de encabezado */
+header {
+  background-color: rgba(255, 215, 0, 0.4);
+  backdrop-filter: blur(15px);
+  border-radius: 0px 0px 1vmax 1vmax;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  left: 0;
+  margin: 0;
+  width: 100%;
+  max-height: 100px;
+  z-index: 2;
+}
+
+/* Estilos para el encabezado h1 */
+header h1 {
+  margin-left: 2rem;
+  padding: 5px;
+  border-radius: .5vmax;
+  background: rgba(255, 215, 0, 0.5);
+}
+
+/* Estilos para el contenido del encabezado */
+header div {
+  margin-right: 2rem;
+}
+
+/* Estilos para el menú de navegación, inicialmente oculto */
+.menu {
+  display: none;
+}
+
+/* Estilos para la barra de navegación */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Estilos para el contenido de la barra de navegación */
+.navbar-content {
+  display: flex;
+  align-items: center;
+}
+
+/* Estilos para los enlaces de navegación */
+.navbar-content a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.3s linear;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 10px;
+}
+
+/* Efectos de hover en los enlaces de navegación */
+.navbar-content a:hover {
+  background: rgba(255, 215, 0, 0.5);
+  border-radius: .8vmax;
+}
+
+/* Estilos para el botón "Regístrate" */
+.reg {
+  background-color: transparent;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.3s linear;
+  border: 0;
+  padding: 10px;
+  cursor: pointer;
+}
+
+/* Efectos de hover en el botón "Regístrate" */
+.reg:hover {
+  background: rgba(255, 215, 0, 0.5);
+  border-radius: .8vmax;
+}
+
+/* Estilos para el contenido del menú desplegable del filtro de productos*/
+.menu-filter-content {
+  display: none;
+  background-color: rgba(255, 215, 0, 0.9);
+  position: absolute;
+  right: 30%;
+  width: 150px;
+  border-radius: 1vmax;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Estilos para el contenido del menú desplegable del header */
+.menu-content {
+  display: none;
+  background-color: rgba(255, 215, 0, 0.9);
+  position: absolute;
+  top: 89px;
+  right: 0;
+  width: 150px;
+  border-radius: 0px 0px 1vmax 1vmax;
+  z-index: 3;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Estilos para los enlaces del menú desplegable */
+.menu-link {
+  display: block;
+  background-color: transparent;
+  color: black;
+  font-weight: bold;
+  border: 0;
+  text-decoration: none;
+  padding: 10px;
+  text-align: center;
+  transition: 0.3s linear;
+  cursor: pointer;
+}
+
+/* Efectos de hover en los enlaces del menú desplegable */
+.menu-link:hover {
+  background: rgba(255, 100, 0, 0.5);
+  border-radius: 0.8vmax;
+}
+
+/* Estilos para la sección principal */
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-block: 2rem;
+}
+
+/* Estilos para el formulario de registro (.regForm) */
+.regForm{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgba(255, 215, 0, 0.4);
+  padding: 20px;
+  backdrop-filter: blur(15px);
+  border-radius: 1vmax;
+  margin-block: 7.75%;
+}
+
+/* Estilos para el encabezado del formulario en un h1 */
+.regForm h1{
+  background-color: rgba(255, 215, 0, 0.5);
+  width: 80%;
+  text-align: center;
+  padding: 10px;
+  border-radius: 1vmax;
+}
+
+/* Estilos al pasar el ratón por encima del formulario */
+.regForm:hover{
+  box-shadow: 0px 0px 10px black;
+}
+
+/* Estilos para los campos de entrada de tipo texto en el formulario */
+.regForm input[type="text"] {
+  margin: 10px;
+  padding: 10px;
+  color: black;
+  border: 0;
+  border-radius: .5vmax;
+  transition: 0.3s linear;
+  text-align: center;
+}
+
+/* Estilos para los campos de entrada de tipo número en el formulario */
+.regForm input[type="number"] {
+  margin: 20px;
+}
+
+/* Efectos de hover en los input de tipo "number" */
+.regForm input[type="text"]:hover {
+  box-shadow: 0px 0px 10px black;
+}
+
+/* Estilos para los artículos dentro de la sección principal */
+article {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: rgba(255, 215, 0, 0.4);
+  backdrop-filter: blur(15px);
+  margin: .5rem;
+  padding: 20px;
+  border-radius: .5vmax;
+  width: 80%;
+  height: 100%;
+  transition: 0.3s linear;
+}
+
+/* Estilos para los encabezados h1 dentro de los artículos */
+article h1 {
+  background-color: rgba(255, 215, 0, 0.5);
+  width: 80%;
+  text-align: center;
+  padding: 10px;
+  border-radius: 1vmax;
+}
+
+/* Estilos para los párrafos dentro de los artículos */
+article p {
+  width: 80%;
+  text-align: justify;
+}
+
+/* Efectos de hover en los artículos */
+article:hover {
+  background-color: rgba(255, 215, 0, 0.6);
+  box-shadow: 0px 0px 15px black;
+}
+
+/* Estilos para la sección con clase "piel" */
+.piel {
+  padding: 0;
+  padding-block: 1rem;
+  width: 100%;
+  background-color: rgba(255, 13, 0, 0.4);
+  border-radius: 0;
+}
+
+/* Efectos de hover en la sección "piel" */
+.piel:hover {
+  background-color: rgba(255, 13, 0, 0.6);
+}
+
+/* Estilos para el contenido dentro de "piel" */
+.piel div {
+  display: grid;
+  grid-template-columns: repeat(2, 50%); /* Este Grid divide en dos de una manera responsiva el contenido del aparatado piel*/
+  align-items: center;
+  width: 50%;
+  gap: 20px;
+}
+
+/* Estilos para las imágenes dentro de "piel" */
+.piel div img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 2vmax;
+}
+
+/* ---------------------------------------------------------- Ej 3 de las transparencias ------------------------------------------------------------------------- */
+/* Estilos para la sección con clase "prods" mostrada en index.html */
+.prods div {
+  display: grid;
+  align-items: center;
+  text-align: center;
+  justify-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Este grid hace que los contenidos se adapten de manera que fraccionen al llegar a 300px de ancho */
+  gap: 10px;
+  padding: 20px;
+  width: 100%;
+}
+
+/* Propiedades para cada item que está dentro del contenedor que muestra los tipos de productos */
+.prods div article{
+  padding: 0;
+  margin: 30px;
+}
+
+/* Estilos para las imágenes dentro de "prods" */
+.prods div img {
+  max-width: 200px;
+  border-radius: .5vmax;
+}
+
+/* Estilos para los párrafos dentro de "prods" */
+.prods div p {
+  text-align: center;
+  background-color: rgba(255, 13, 0, 0.4);
+  padding: 10px;
+  border-radius: 1vmax;
+  width: 50%;
+}
+
+/* Estilos para los enlaces dentro de "prods" */
+.prods a {
+  padding: 20px;
+  text-decoration: none;
+  background-color: rgba(255, 215, 0, 0.6);
+  transition: 0.3s linear;
+  border-radius: 1vmax;
+}
+
+/* Efectos de hover en los enlaces de "prods" */
+.prods a:hover {
+  box-shadow: 0px 0px 15px black;
+}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* ----------------------------------------------------------- Ej 1 de las transparencias ----------------------------------------------------------- */
+/* Estilos para la sección con clase "productos" */
+.productos {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Delimito el tamaño de cada producto para que este encaje a la perfección en el contenedor flex .productos*/
+.productos article{
+  max-width: 200px;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* Estilos para las imágenes dentro de "productos" */
+.productos article img {
+  max-width: 200px;
+  border-radius: .5vmax;
+}
+
+/* Estilos para los párrafos dentro de "productos" */
+.productos article p {
+  text-align: center;
+  background-color: rgba(255, 13, 0, 0.4);
+  padding: 5px;
+  border-radius: 1vmax;
+  width: 50%;
+}
+/* Estilos para el botón de compra */
+.comprar{
+  background-color:rgb(255, 255, 0, 0.8);
+  color: black;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 1vmax;
+  border: 0;
+  transition: 0.3s linear;
+  cursor: pointer;
+}
+
+/* Estilos al pasar el ratón por encima del botón de compra */
+.comprar:hover{
+  padding: 13px;
+  box-shadow: inset 0px 0px 5px black;
+}
+
+/* Estilos para la sección con clase "tiendas" */
+.tiendas {
+  padding: 0;
+  padding-block: 1rem;
+  width: 100%;
+  background-color: rgba(255, 13, 0, 0.4);
+  border-radius: 0;
+}
+
+/* Efectos de hover en la sección "tiendas" */
+.tiendas:hover {
+  background-color: rgba(255, 13, 0, 0.6);
+}
+
+/* Estilos para el contenido dentro de "tiendas" */
+.tiendas div {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);/* al igual que en el apartado de piel este divide el contenido en 2 de forma adaptativa */
+  align-items: center;
+  width: 80%;
+  gap: 20px;
+}
+
+/* Estilos para las imágenes dentro de "tiendas" */
+.tiendas div img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 2vmax;
+}
+
+/* Estilos para el contenido interno de "tiendas" */
+.tiendas div div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Estilos para los input de tipo "number" en formularios */
+form input[type="number"] {
+  padding: 10px;
+  color: black;
+  border: 0;
+  border-radius: .5vmax;
+  transition: 0.3s linear;
+  text-align: center;
+}
+
+/* Efectos de hover en los input de tipo "number" */
+form input[type="number"]:hover {
+  box-shadow: 0px 0px 10px black;
+}
+
+/* Estilos para los botones de tipo "submit" en formularios */
+form input[type="submit"] {
+  padding: 10px;
+  border: 0;
+  border-radius: .5vmax;
+  cursor: pointer;
+  background: rgba(255, 215, 0, 0.4);
+}
+
+/* Efectos de hover en los botones de tipo "submit" */
+form input[type="submit"]:hover {
+  background: rgba(255, 215, 0, 0.6);
+  box-shadow: 0px 0px 10px black;
+}
+
+/* Estilos para la sección "tienda" con clase "tienda" */
+.tienda article p {
+  text-align: center;
+  margin: 5px;
+}
+
+/* Estilos para las imágenes dentro de "tienda" */
+.tienda article img {
+  max-width: 80%;
+  border-radius: .5vmax;
+}
+
+/* Estilos para la sección "blogs" */
+.blog {
+  background-color: rgba(255, 255, 120, 0.5);
+  width: 95%;
+}
+
+/* Estilos para los artículos dentro de "blogs" y los enlaces */
+.blogs article a {
+  background-color: rgba(255, 200, 0, 0.5);
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 1vmax;
+  border: 0;
+  transition: 0.3s linear;
+}
+
+/* Efectos de hover en los enlaces de "blogs" */
+.blogs article a:hover {
+  background-color: rgba(255, 200, 0, 0.8);
+  box-shadow: 0px 0px 5px black;
+}
+
+/* Estilos para la sección "aside" */
+aside {
+  display: grid;
+  grid-template-columns: repeat(2, 50%); /* Divide en 2 partes iguales teniendo en cuenta el ancho del aside */
+  position: sticky;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 13, 0, 0.4);
+  width: 100%;
+  text-align: center;
+}
+
+/* Estilos para los elementos dentro de "aside" */
+aside div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+}
+
+/* Ajustes de estilo para el menú en "aside" */
+aside div .menu {
+  padding-right: 0;
+}
+
+/* Estilos para los selectores en "aside" */
+aside select {
+  border-radius: 100vmax;
+  padding: 5px;
+  color: black;
+}
+
+/* Estilos para las opciones de los selectores en "aside" */
+aside option {
+  color: black;
+}
+
+/* Estilos para los enlaces de tipos de productos */
+aside .tipos {
+  margin: 0;
+}
+
+/* Estilos para la sección "tipos" con clase "tipos" */
+.tipos {
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+  padding: 0;
+}
+
+/* Estilos para los enlaces dentro de "tipos" */
+.tipos a {
+  background-color: rgba(255, 255, 0, 0.4);
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 5px;
+  border-radius: 1vmax;
+  border: 0;
+  transition: 0.3s linear;
+  margin: 5px;
+}
+
+/* Efectos de hover en los enlaces de "tipos" */
+.tipos a:hover {
+  background-color: rgba(255, 255, 0, 0.8);
+}
+
+
+/* Estilos para la sección 'sobre' */
+.sobre {
+  height: 100%;
+}
+
+/* Estilos para el pie de página 'footer' */
+footer {
+  background-color: rgba(255, 215, 0, 0.4);
+  backdrop-filter: blur(15px);
+  border-radius: 1vmax 1vmax 0px 0px;
+  position: sticky;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+/* Estilos para la estructura del contenido del pie de página */
+.footer-content {
+  margin-bottom: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(30%, 1fr)); /* Este grid rellena de forma automatica dandole un ancho maximo del 30% a cada item del contenido */
+  align-items: center;
+  width: 100%;
+}
+
+/* Estilos para secciones específicas dentro del pie de página */
+.footer-section {
+  text-align: center;
+}
+
+.copyright {
+  width: 100%;
+}
+
+/* Estilos para listas desordenadas dentro de elementos del pie de página */
+.footer-section ul {
+  list-style: none;
+}
+
+.footer-section ul li {
+  list-style: none;
+  margin: 5px;
+}
+
+/* Estilos para enlaces dentro de elementos de lista en el pie de página */
+.footer-section ul li a {
+  text-decoration: none;
+  transition: 0.3s linear;
+  padding: 5px;
+}
+
+/* Estilos para la sección 'directos' en el pie de página */
+.directos {
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(50px, 1fr)); /* Este grid adapta cada item de la lista, cuando llegue a un ancho de 50px y no quepa en la lista este se fraccione hacia abajo */
+  align-items: center;
+}
+
+/* Estilos al pasar el ratón por encima de los enlaces dentro de 'directos' */
+.directos li a:hover {
+  background: rgba(255, 215, 0, 0.5);
+  border-radius: .5vmax;
+}
+
+/* Estilos para la sección 'social-icons' en el pie de página */
+.social-icons {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25px, 1fr)); /* Lo mismo que con la lista de enlaces directos pero con un ancho máximo de 25px */
+  padding: 0;
+  margin: 0;
+}
+
+/* Estilos para las imágenes de enlace dentro de 'social-icons' */
+.social-icons li a img {
+  width: 35px;
+  background-color: rgba(255, 215, 0, 0.5);
+  border-radius: 100vmax;
+}
+
+/* sombra para las imagenes de las redes sociales */
+.social-icons li a img:hover{
+  box-shadow: 0px 0px 10px black;
+}
+
+
+/* Media query para pantallas con ancho máximo de 1000px */
+@media (max-width: 1000px) {
+  .tipos {
+      display: none; /* Oculta el elemento '.tipos' */
+  }
+
+  .navbar {
+      display: none; /* Oculta el elemento '.navbar' */
+  }
+
+  .reg {
+      display: none; /* Oculta el elemento '.reg' */
+  }
+
+  .menu {
+      display: block; /* Muestra el elemento '.menu' como un ícono de menú */
+      background: transparent;
+      border: 0;
+      padding-right: 20px;
+      transition: 0.3s linear; /* Transición suave */
+      cursor: pointer;
+  }
+
+  .menu img {
+      max-width: 40px;
+  }
+
+  .menu:hover {
+      opacity: 70%; /* Cambia la opacidad al pasar el ratón por encima */
+  }
+}
+
+/* Media query para pantallas con ancho máximo de 800px */
+@media (max-width: 800px) {
+  .footer-content {
+      display: flex; /* Cambia la disposición a flexbox */
+      align-items: center;
+      margin: 0;
+      padding: 0;
+  }
+  .footer-section {
+      display: none; /* Oculta la sección '.footer-section' */
+  }
+  footer {
+      height: 60px; /* Establece una altura fija para el pie de página */
+  }
+  .copyright {
+      width: 100%;
+      text-align: center; /* Centra el texto en el pie de página */
+  }
+}
